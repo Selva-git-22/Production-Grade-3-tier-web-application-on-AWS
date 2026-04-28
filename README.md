@@ -1,5 +1,6 @@
 PRODUCTION GRADE 3-TIER WEB APPLICATION ON AWS
-<img width="1536" height="1024" alt="3-tier architecture" src="https://github.com/user-attachments/assets/0eef11cb-d601-4e19-8d6e-c135c099cbf0" />
+<img width="1536" height="1024" alt="3 tier architecture on aws" src="https://github.com/user-attachments/assets/56d21066-b5a5-4bcd-b69c-fb56286a8cdc" />
+
 
 PROJECT OVERVIEW:
 * This project demonstrates the deployment of a 3-tier e-commerce application using docker.
