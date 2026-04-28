@@ -1,3 +1,5 @@
+PRODUCTION GRADE 3-TIER WEB APPLICATION ON AWS
+
 PROJECT OVERVIEW:
 * This project demonstrates the deployment of a 3-tier e-commerce application using docker.
 
