@@ -1,4 +1,5 @@
 PRODUCTION GRADE 3-TIER WEB APPLICATION ON AWS
+<img width="1536" height="1024" alt="3-tier architecture" src="https://github.com/user-attachments/assets/0eef11cb-d601-4e19-8d6e-c135c099cbf0" />
 
 PROJECT OVERVIEW:
 * This project demonstrates the deployment of a 3-tier e-commerce application using docker.
@@ -74,6 +75,47 @@ Steps:
   * Nginx (Reverse Proxy)
     * Nginx Role:
       * Route traffic to Node app 
+
+LAUNCH TEMPLATE:
+* AMI (custom created)
+* Instance type (t3.micro)
+* IAM Role:
+  * S3 access
+  * CloudWatch logs 
+* User Data Script:
+  * Start Docker container
+
+AUTO SCALING GROUP (ASG):
+* Min Instances: 2 
+* Max Instances: 5 
+* Desired: 2 
+
+Scaling Policy:
+* Type: Target Tracking 
+* Metric: CPU Utilization 
+* Target: 60%
+
+LOAD BALANCER (ALB):
+Create Application Load Balancer:
+* Listener: 
+  * HTTP → Redirect to HTTPS
+  * HTTPS (Port 443) 
+* Attach: 
+ * SSL from AWS Certificate Manager 
+* Target Group: 
+  * Register Auto Scaling Group
+
+DNS CONFIGURATION (Route 53).
+
+MONITORING & LOGGING:
+Using Amazon CloudWatch:
+* Metrics: 
+ * CPU utilization 
+ * Network traffic 
+* Logs: 
+ * Application logs
+ * Nginx logs
+
 
 
 
